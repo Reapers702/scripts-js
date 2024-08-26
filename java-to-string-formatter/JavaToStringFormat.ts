@@ -48,11 +48,11 @@ class LombokToStringDeser {
         count = Math.min(count, this.input.length - this.pos);
         return this.input.substring(this.pos, this.pos + count);
     }
-    move(count: number): undefined {
+    move(count: number): void {
         this.pos += count;
     }
 
-    tokenize(): undefined {
+    tokenize(): void {
         let containerStack: string[] = ['OBJECT'];
         let currentVal = '';
         let next = '';
